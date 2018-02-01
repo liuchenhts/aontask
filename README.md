@@ -12,3 +12,5 @@ This project is using spring boot to provide a REST API.
  http://chen.ap-southeast-2.elasticbeanstalk.com:8080/quotes?postcode=2000&occupation=Plumber&turnover=600000
  http://chen.ap-southeast-2.elasticbeanstalk.com:8080/quotes?postcode=2001&occupation=Butcher&turnover=300000
 
+5. the source code is also available at my personal github:
+ https://github.com/liuchenhts/aontask
