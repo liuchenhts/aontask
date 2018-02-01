@@ -1,0 +1,21 @@
+# docker-compose run --rm  --service-ports maven bash
+# the above command will start a container for this one-off java development env in a bash shell
+# environment variables is defined in .env file or the local env
+version: "3"
+services:
+  maven:
+    # replace username/repo:tag with your name and image details
+    image: maven:3.5-jdk-8
+    volumes:
+      - "$PWD:/code"
+      - "$HOME/.m2:/root/.m2"
+      - "/var:/var"
+    working_dir: /code
+    ports:
+      - "8080:8080"
+networks:
+  default:
+    external:
+      # make sure the external network is created in advance using below command
+      # docker network create --driver bridge development
+      name: development
