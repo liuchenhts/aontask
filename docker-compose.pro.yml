@@ -1,0 +1,8 @@
+# This is for production container
+
+version: "3"
+services:
+  maven:
+    image: liuchen/aontask
+    ports:
+      - "8080:8080"
